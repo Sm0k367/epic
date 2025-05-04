@@ -1,0 +1,342 @@
+:root {
+  --epic-primary: #6200ea;
+  --epic-secondary: #03dac6;
+  --epic-accent: #ff0266;
+  --epic-dark: #121212;
+  --epic-light: #f5f5f5;
+  --epic-gradient: linear-gradient(135deg, #6200ea, #03dac6);
+  --epic-glow: 0 0 15px rgba(98, 0, 234, 0.5);
+}
+
+.epic-tech-theme {
+  background-color: var(--epic-dark);
+  color: var(--epic-light);
+}
+
+.epic-tech-header {
+  background: var(--epic-gradient);
+  padding: 3rem 0;
+}
+
+.epic-tech-logo {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  animation: rotate 20s linear infinite;
+}
+
+.epic-tech-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--epic-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--epic-accent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.epic-tech-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: var(--epic-glow);
+}
+
+.epic-tech-ring:nth-child(2) {
+  width: 40px;
+  height: 40px;
+  animation: rotate 8s linear infinite;
+}
+
+.epic-tech-ring:nth-child(3) {
+  width: 60px;
+  height: 60px;
+  animation: rotate 12s linear infinite reverse;
+}
+
+.epic-tech-ring:nth-child(4) {
+  width: 80px;
+  height: 80px;
+  animation: rotate 16s linear infinite;
+}
+
+.epic-tech-hero {
+  background: var(--epic-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.epic-tech-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(98, 0, 234, 0.2) 0%, rgba(18, 18, 18, 1) 70%);
+  z-index: 1;
+}
+
+.epic-tech-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.capabilities {
+  background-color: #1a1a1a;
+  padding: 5rem 0;
+}
+
+.capabilities h2, .showcase h2, .philosophy h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  background: var(--epic-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.capability-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.capability-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--epic-gradient);
+}
+
+.capability-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.capability-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--epic-secondary);
+}
+
+.capability-card h3 {
+  color: var(--epic-secondary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.showcase {
+  background-color: #121212;
+  padding: 5rem 0;
+}
+
+.showcase-tabs {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tab-headers {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tab-header {
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--epic-light);
+  cursor: pointer;
+  transition: all 0.3s;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-header:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tab-header.active {
+  border-bottom: 3px solid var(--epic-secondary);
+  color: var(--epic-secondary);
+}
+
+.tab-content {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.showcase-item {
+  text-align: center;
+}
+
+.showcase-icon {
+  font-size: 2rem;
+  color: var(--epic-secondary);
+  margin-bottom: 1rem;
+}
+
+.showcase-item h4 {
+  color: var(--epic-light);
+  margin-bottom: 0.5rem;
+}
+
+.philosophy {
+  background-color: #1a1a1a;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.philosophy-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.philosophy-content p {
+  margin-bottom: 1.5rem;
+}
+
+.cta {
+  background: var(--epic-gradient);
+  padding: 5rem 0;
+  text-align: center;
+  color: white;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.pulse-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--epic-accent);
+  color: white;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(255, 2, 102, 0.4);
+  margin-top: 2rem;
+}
+
+.pulse-button.large {
+  padding: 1.2rem 3rem;
+  font-size: 1.2rem;
+}
+
+.pulse-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 2, 102, 0.6);
+}
+
+.pulse-button.pulse {
+  animation: button-pulse 1s infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes button-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 2, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(255, 2, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 2, 102, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .tab-headers {
+    flex-direction: column;
+  }
+  
+  .tab-header {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .capabilities-grid,
+  .showcase-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .epic-tech-logo {
+    width: 60px;
+    height: 60px;
+  }
+}

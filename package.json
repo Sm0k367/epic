@@ -1,0 +1,29 @@
+{
+  "name": "epic-tech-ai",
+  "version": "1.0.0",
+  "description": "A demonstration of an AI assistant concept without typical limitations",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "keywords": [
+    "ai",
+    "chatbot",
+    "unlimited",
+    "tech",
+    "assistant"
+  ],
+  "author": "Epic Tech",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sm0k367/Epic-Tech.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sm0k367/Epic-Tech/issues"
+  },
+  "homepage": "https://github.com/Sm0k367/Epic-Tech#readme"
+}
